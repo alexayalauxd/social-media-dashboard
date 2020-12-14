@@ -40,7 +40,18 @@ body{
     content: "";
     height: 4px;
     display: block;
+}
+.facebook:before{
+    background-color: var(--Facebook);
+}
+.twitter:before{
     background-color: var(--Twitter);
+}
+.instagram:before{
+    background: linear-gradient(90deg, var(--Instagram-Yellow) 0%, var(--Instagram-Pink) 100%);
+}
+.youtube:before{
+    background-color: var(--Youtube);
 }
 .card__title{
     /* border: 1px solid green; */
