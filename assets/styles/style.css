@@ -142,7 +142,6 @@ Cards
     OverView
 ----- ----- ----- ----- ----- -----*/
 .overview{
-    border: 1px solid green;
     /* margin-bottom: 1000px; */
 }
 .cardSmall{
@@ -151,26 +150,27 @@ Cards
     row-gap: 1em;
     background-color: var(--Gray);
     border-radius: 8px;
-    padding: .8em;
+    padding: 1.8em;
 }
 .cardSmall p{
     margin: 0;
 }
 .cardSmall__title{
-    border: 1px solid green;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    font-weight: 600;
+    color: var(--Blue-Gray);
+    padding-bottom: 1em;
 }
 .cardSmall__icon{
-    border: 1px solid red;
     text-align: right;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding-bottom: 1em;
 }
 .cardSmall__number{
-    border: 1px solid tomato;
     font-weight: bold;
     font-size: 2.5em;
     display: flex;
@@ -178,9 +178,10 @@ Cards
     justify-content: flex-start;
 }
 .cardSmall__percentage{
-    border: 1px solid blue;
     text-align: right;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    color: var(--Red);
+    font-weight: 600;
 }
