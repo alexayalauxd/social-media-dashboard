@@ -148,16 +148,39 @@ Cards
 .cardSmall{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
+    background-color: var(--Gray);
+    border-radius: 8px;
+    padding: .8em;
+}
+.cardSmall p{
+    margin: 0;
 }
 .cardSmall__title{
-
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 .cardSmall__icon{
+    border: 1px solid red;
     text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .cardSmall__number{
-    
+    border: 1px solid tomato;
+    font-weight: bold;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 .cardSmall__percentage{
+    border: 1px solid blue;
     text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
