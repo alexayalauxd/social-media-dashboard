@@ -182,6 +182,9 @@ Cards
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    color: var(--Red);
+    color: var(--Green);
     font-weight: 600;
+}
+.danger{
+    color: var(--Red);
 }
