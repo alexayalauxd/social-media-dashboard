@@ -1,4 +1,4 @@
-:root{
+:root {
     --Green: hsl(163, 72%, 41%);
     --Red: hsl(356, 69%, 56%);
     --White: hsl(0, 0%, 100%);
@@ -10,32 +10,42 @@
     --Twitter: hsl(203, 89%, 53%);
     --Facebook: hsl(208, 92%, 53%);
 
-    --Toggle: hsl(230, 22%, 74%);
+    --Toggle-Gray: hsl(230, 22%, 74%);
+    --Toggle-Blue: hsl(210, 78%, 56%);
+    --Toggle-Green: hsl(146, 68%, 55%);
 
     --Blue-Gray: hsl(228, 12%, 44%);
     --Blue-Dark: hsl(230, 17%, 14%);
+
+    --Dark-Blue-BG: hsl(230, 17%, 14%);
+    --Dark-Very-Header: hsl(232, 19%, 15%);
+    --Dark-Blue-Card: hsl(228, 28%, 20%);
+    --Dark-Blue-text: hsl(228, 34%, 66%);
+    --Dark-White: hsl(0, 0%, 100%);
+
+
 }
 
 /*----- ----- ----- ----- ----- -----
     General
 ----- ----- ----- ----- ----- -----*/
-body{
+body {
     margin: 0;
     font-size: 14px;
     font-family: 'Inter', sans-serif;
 }
-header{
+header {
     background-color: var(--white);
     padding-bottom: 100px;
     padding-top: 35px;
     border-radius: 0 0 15px 15px;
 }
-.header__title{
+.header__title {
     border: none;
     margin: 0;
     font-size: 1.7em;
 }
-.header__p{
+.header__p {
     color: var(--Blue-Gray);
     margin: .5em 0;
     font-size: .9em;
@@ -43,7 +53,7 @@ header{
     border-bottom: 2px solid var(--Blue-Gray);
     padding-bottom: 1.5em;
 }
-.wrapper{
+.wrapper {
     padding: 0 30px;
 }
 
@@ -51,18 +61,15 @@ header{
 /*----- ----- ----- ----- ----- -----
 Cards
 ----- ----- ----- ----- ----- -----*/
-.card__content{
+.card__content {
     margin-top: -50px;
     margin-bottom: 2em;
 }
-.grid{
+.grid {
     display: grid;
     row-gap: 25px;
 }
-.card{
-    /* --------------------- --------------------- ---------------------
-    display: none; 
-    --------------------- --------------------- --------------------- */
+.card {
     border-radius: 8px;
     overflow: hidden;
     background-color: var(--Gray);
@@ -72,7 +79,7 @@ Cards
     position: relative;
 }
 /* Pseudoelement before */
-.card:before{
+.card:before {
     content: "";
     height: 4px;
     display: block;
@@ -86,16 +93,16 @@ Cards
 /*----- ----- ----- ----- ----- -----
     Cards Color
 ----- ----- ----- ----- ----- -----*/
-.facebook:before{
+.facebook:before {
     background-color: var(--Facebook);
 }
-.twitter:before{
+.twitter:before {
     background-color: var(--Twitter);
 }
-.instagram:before{
+.instagram:before {
     background: linear-gradient(90deg, var(--Instagram-Yellow) 0%, var(--Instagram-Pink) 100%);
 }
-.youtube:before{
+.youtube:before {
     background-color: var(--Youtube);
 }
 
@@ -103,7 +110,7 @@ Cards
 /*----- ----- ----- ----- ----- -----
     Cards Content
 ----- ----- ----- ----- ----- -----*/
-.card__title{
+.card__title {
     /* border: 1px solid green; */
     display: flex;
     align-items: center;
@@ -113,22 +120,22 @@ Cards
     font-size: .8em;
     font-weight: bold;
 }
-.card__title img{
+.card__title img {
     margin-right: 5px;
 }
-.card__followers{
+.card__followers {
 }
-.card__followers-nomber{
+.card__followers-nomber {
     font-size: 3em;
     font-weight: 700;
 }
-.card__followers-title{
+.card__followers-title {
     display: block;
     text-transform: uppercase;
     color: var(--Blue-Gray);
     letter-spacing: 2.5px;
 }
-.card__today{
+.card__today {
     color: var(--Green);
     font-weight: bold;
     font-size: .8em;
@@ -138,20 +145,20 @@ Cards
     align-items: center;
     justify-content: center;
 }
-.card__today img{
+.card__today img {
     margin-right: 5px;
 }
 
 /*----- ----- ----- ----- ----- -----
     OverView
 ----- ----- ----- ----- ----- -----*/
-.overview{
+.overview {
     margin-bottom: 2em;
 }
-.overview__title{
+.overview__title {
     color: var(--Blue-Gray);
 }
-.cardSmall{
+.cardSmall {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 1em;
@@ -159,10 +166,10 @@ Cards
     border-radius: 8px;
     padding: 1.8em;
 }
-.cardSmall p{
+.cardSmall p {
     margin: 0;
 }
-.cardSmall__title{
+.cardSmall__title {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -170,21 +177,21 @@ Cards
     color: var(--Blue-Gray);
     padding-bottom: 1em;
 }
-.cardSmall__icon{
+.cardSmall__icon {
     text-align: right;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-bottom: 1em;
 }
-.cardSmall__number{
+.cardSmall__number {
     font-weight: bold;
     font-size: 2.5em;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-.cardSmall__percentage{
+.cardSmall__percentage {
     text-align: right;
     display: flex;
     align-items: center;
@@ -192,7 +199,7 @@ Cards
     color: var(--Green);
     font-weight: 600;
 }
-.danger{
+.danger {
     color: var(--Red);
 }
 
@@ -201,11 +208,11 @@ Cards
     Media Tablet
 ----- ----- ----- ----- ----- -----*/
 @media screen and (min-width: 620px) {
-    .grid{
+    .grid {
         grid-template-columns: 1fr 1fr;
         column-gap: 25px;
     }
-    .wrapper{
+    .wrapper {
         max-width: 1440px;
         margin: auto;
     }
@@ -216,11 +223,11 @@ Cards
     Media Desktop
 ----- ----- ----- ----- ----- -----*/
 @media screen and (min-width: 620px) {
-    .grid{
+    .grid {
         grid-template-columns: 1fr 1fr;
         column-gap: 25px;
     }
-    .wrapper{
+    .wrapper {
         max-width: 1440px;
         margin: auto;
     }
@@ -230,12 +237,30 @@ Cards
     Media Desktop
 ----- ----- ----- ----- ----- -----*/
 @media screen and (min-width: 1024px) {
-    .grid{
+    .grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 25px;
     }
-    .wrapper{
+    .wrapper {
         max-width: 1440px;
         margin: auto;
+    }
+}
+
+/*----- ----- ----- ----- ----- -----
+    Dark Mode
+----- ----- ----- ----- ----- -----*/
+@media (prefers-color-scheme: dark) {
+    /*----- ----- ----- ----- ----- -----
+        General
+    ----- ----- ----- ----- ----- -----*/
+    body {
+        background-color: var(--Dark-Blue-BG);
+    }
+    .header__title {
+        color: var(--Dark-White);
+    }
+    header {
+        background-color: var(--Dark-Very-Header);
     }
 }
