@@ -59,6 +59,9 @@ Cards
     row-gap: 25px;
 }
 .card{
+    /* --------------------- --------------------- ---------------------
+    display: none; 
+    --------------------- --------------------- --------------------- */
     border-radius: 8px;
     overflow: hidden;
     background-color: var(--Gray);
@@ -143,6 +146,9 @@ Cards
 ----- ----- ----- ----- ----- -----*/
 .overview{
     /* margin-bottom: 1000px; */
+}
+.overview__title{
+    color: var(--Blue-Gray);
 }
 .cardSmall{
     display: grid;
