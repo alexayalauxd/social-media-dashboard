@@ -53,6 +53,7 @@ Cards
 ----- ----- ----- ----- ----- -----*/
 .card__content{
     margin-top: -50px;
+    margin-bottom: 2em;
 }
 .grid{
     display: grid;
@@ -145,7 +146,7 @@ Cards
     OverView
 ----- ----- ----- ----- ----- -----*/
 .overview{
-    /* margin-bottom: 1000px; */
+    margin-bottom: 2em;
 }
 .overview__title{
     color: var(--Blue-Gray);
@@ -193,4 +194,18 @@ Cards
 }
 .danger{
     color: var(--Red);
+}
+
+/*----- ----- ----- ----- ----- -----
+    Media Tablet
+----- ----- ----- ----- ----- -----*/
+@media screen and (min-width: 620px) {
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+    .wrapper{
+        max-width: 1440px;
+        margin: auto;
+    }
 }
