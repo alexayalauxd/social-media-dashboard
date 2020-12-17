@@ -20,7 +20,7 @@
     --Dark-Blue-BG: hsl(230, 17%, 14%);
     --Dark-Very-Header: hsl(232, 19%, 15%);
     --Dark-Blue-Card: hsl(228, 28%, 20%);
-    --Dark-Blue-text: hsl(228, 34%, 66%);
+    --Dark-Blue-Text: hsl(228, 34%, 66%);
     --Dark-White: hsl(0, 0%, 100%);
 
 
@@ -61,7 +61,7 @@ header {
 /*----- ----- ----- ----- ----- -----
 Cards
 ----- ----- ----- ----- ----- -----*/
-.card__content {
+.top__card {
     margin-top: -50px;
     margin-bottom: 2em;
 }
@@ -133,7 +133,8 @@ Cards
     display: block;
     text-transform: uppercase;
     color: var(--Blue-Gray);
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
+    margin-top: .5em;
 }
 .card__today {
     color: var(--Green);
@@ -262,5 +263,27 @@ Cards
     }
     header {
         background-color: var(--Dark-Very-Header);
+    }
+    .header__p {
+        color: var(--Dark-Blue-Text);
+        border-bottom: 2px solid var(--Dark-Blue-Text);
+    }
+    /*----- ----- ----- ----- ----- -----
+        Cards
+    ----- ----- ----- ----- ----- -----*/
+    .card {
+        background-color: var(--Dark-Blue-Card);
+    }
+    /*----- ----- ----- ----- ----- -----
+    Cards Content
+    ----- ----- ----- ----- ----- -----*/
+    .card__title {
+        color: var(--Dark-Blue-Text);
+    }
+    .card__followers-nomber{
+        color: var(--Dark-White);
+    }
+    .card__followers-title {
+        color: var(--Dark-Blue-Text);
     }
 }
