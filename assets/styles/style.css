@@ -34,6 +34,14 @@ body {
     font-size: 14px;
     font-family: 'Inter', sans-serif;
 }
+.wrapper {
+    padding: 0 30px;
+}
+
+
+/*----- ----- ----- ----- ----- -----
+    Header
+----- ----- ----- ----- ----- -----*/
 header {
     background-color: var(--white);
     padding-bottom: 100px;
@@ -53,10 +61,6 @@ header {
     border-bottom: 2px solid var(--Blue-Gray);
     padding-bottom: 1.5em;
 }
-.wrapper {
-    padding: 0 30px;
-}
-
 
 /*----- ----- ----- ----- ----- -----
 Cards
@@ -257,6 +261,7 @@ Cards
     ----- ----- ----- ----- ----- -----*/
     body {
         background-color: var(--Dark-Blue-BG);
+        color: var(--Dark-Blue-Text);
     }
     .header__title {
         color: var(--Dark-White);
@@ -285,5 +290,17 @@ Cards
     }
     .card__followers-title {
         color: var(--Dark-Blue-Text);
+    }
+    /*----- ----- ----- ----- ----- -----
+    OverView
+    ----- ----- ----- ----- ----- -----*/
+    .overview__title {
+        color: var(--Dark-White);
+    }
+    .cardSmall {
+        background-color: var(--Dark-Blue-Card);
+    }
+    .cardSmall__number {
+        color: var(--Dark-White);
     }
 }
