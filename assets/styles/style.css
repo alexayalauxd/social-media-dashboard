@@ -196,12 +196,42 @@ Cards
     color: var(--Red);
 }
 
+
 /*----- ----- ----- ----- ----- -----
     Media Tablet
 ----- ----- ----- ----- ----- -----*/
 @media screen and (min-width: 620px) {
     .grid{
         grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+    .wrapper{
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+
+
+/*----- ----- ----- ----- ----- -----
+    Media Desktop
+----- ----- ----- ----- ----- -----*/
+@media screen and (min-width: 620px) {
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+    .wrapper{
+        max-width: 1440px;
+        margin: auto;
+    }
+}
+
+/*----- ----- ----- ----- ----- -----
+    Media Desktop
+----- ----- ----- ----- ----- -----*/
+@media screen and (min-width: 1024px) {
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 25px;
     }
     .wrapper{
