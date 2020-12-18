@@ -1,32 +1,39 @@
 :root {
-    --Color-header: #20222F;
+    --Background: #FFFFFF;
+    --Color-header:#F8F9FE;
+    --Black-white: #202028;
+    --Gray-dark: #717483;
+    --Gray-light: #9496A2;
+    --Card: #F0F3FA;
+    --Switch-1: #AEB3C9;
+    --Switch-2: #AEB3C9;
 
+
+    --Facebook: #258DE6;
+    --Twitter: #289EE6;
+    --Instagram-yellow: #F2C375;
+    --Instagram-pink: #DA5597;
+    --Youtube: #B40A2E;
+    --Green: #2CA886;
+    --Red: #B94751;
 }
 
 /*----- ----- ----- ----- ----- -----
-    Dark Mode
+Dark Mode
 ----- ----- ----- ----- ----- -----*/
 @media (prefers-color-scheme: dark) {
     :root {
+        --Background: #1D2029;
         --Color-header: #20222F;
-    }
-    .header__p {
-        color: var(--Dark-Blue-Text);
-    }
-    .card__title {
-        color: var(--Dark-Blue-Text);
-    }
-    .card__followers-title {
-        color: var(--Dark-Blue-Text);
-    }
-    .overview__title {
-        color: var(--Dark-White);
-    }
-    .cardSmall__number {
-        color: var(--Dark-White);
+        --Black-white: #FEFFFF;
+        --Gray-dark: #6F7598;
+        --Gray-light:#777C99;
+        --Card: #252B43;
+        --Switch-1: #4595D0;
+        --Switch-2: #3CD18D;
     }
     .switch{
-        background: linear-gradient(90deg, var(--Toggle-Blue) 0%, var(--Toggle-Green) 100%);
+        background: linear-gradient(90deg, #4595D0 0%, #3CD18D 100%);
     }
 }
 
@@ -37,8 +44,7 @@ body {
     margin: 0;
     font-size: 14px;
     font-family: 'Inter', sans-serif;
-    background-color: var(--Body-Bg);
-    color: var(--Body-Text);
+    background-color: var(--Background);
 }
 .wrapper {
     padding: 0 30px;
@@ -58,14 +64,14 @@ header {
     border: none;
     margin: 0;
     font-size: 1.7em;
-    color: var(--Black-White);
+    color: var(--Black-white);
 }
 .header__p {
-    color: var(--Color-nose);
+    color: var(--Gray-dark);
     margin: .5em 0;
     font-size: .9em;
     font-weight: 600;
-    border-bottom: 2px solid var(--Color-nose);
+    border-bottom: 2px solid var(--Black-white);
     padding-bottom: 1.5em;
 }
 
@@ -78,6 +84,10 @@ header {
     padding: .5em;
     align-items: center;
 }
+.dark__title{
+    color: var(--Gray-dark);
+    font-weight: 600;
+}
 .checkbox{
     display: none;
 }
@@ -89,7 +99,7 @@ header {
     height: 2em;
     width: 4em;
     border-radius: 1.2em;
-    background-color: var(--Toggle-Gray);
+    background: linear-gradient(90deg, var(--Switch-1) 0%, var(--Switch-2) 100%);
     padding: .2em;
     box-sizing: border-box;
     cursor: pointer;
@@ -98,7 +108,7 @@ header {
 .switch:before {
     content: "";
     display: block;
-    background-color: var(--Header);
+    background-color: var(--Background);
     width: 1.5em;
     height: 1.5em;
     border-radius: 1.5em;
@@ -121,7 +131,7 @@ Cards
 .card {
     border-radius: 8px;
     overflow: hidden;
-    background-color: var(--Card-Bg);
+    background-color: var(--Card);
     text-align: center;
     margin-bottom: 10px;
     padding: 1.5em 0;
@@ -149,7 +159,7 @@ Cards
     background-color: var(--Twitter);
 }
 .instagram:before {
-    background: linear-gradient(90deg, var(--Instagram-Yellow) 0%, var(--Instagram-Pink) 100%);
+    background: linear-gradient(90deg, var(--Instagram-yellow) 0%, var(--Instagram-pink) 100%);
 }
 .youtube:before {
     background-color: var(--Youtube);
@@ -165,7 +175,7 @@ Cards
     align-items: center;
     justify-content: center;
 
-    color: var(--Color-nose);
+    color: var(--Gray-dark);
     font-size: .8em;
     font-weight: bold;
 }
@@ -175,12 +185,12 @@ Cards
 .card__followers-nomber {
     font-size: 3em;
     font-weight: 700;
-    color: var(--Black-White);
+    color: var(--Black-white);
 }
 .card__followers-title {
     display: block;
     text-transform: uppercase;
-    color: var(--Color-nose);
+    color: var(--Gray-light);
     letter-spacing: 3px;
     margin-top: .5em;
 }
@@ -205,13 +215,13 @@ Cards
     margin-bottom: 2em;
 }
 .overview__title {
-    color: var(--Color-nose);
+    color: var(--Gray-dark);
 }
 .cardSmall {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 1em;
-    background-color: var(--Card-Bg);
+    background-color: var(--Card);
     border-radius: 8px;
     padding: 1.8em;
 }
@@ -223,7 +233,7 @@ Cards
     align-items: center;
     justify-content: flex-start;
     font-weight: 600;
-    color: var(--Color-nose);
+    color: var(--Gray-dark);
     padding-bottom: 1em;
 }
 .cardSmall__icon {
@@ -239,6 +249,7 @@ Cards
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    color: var(--Black-white);
 }
 .cardSmall__percentage {
     text-align: right;
@@ -248,6 +259,7 @@ Cards
     color: var(--Green);
     font-weight: 600;
 }
+
 .danger {
     color: var(--Red);
 }
@@ -302,4 +314,3 @@ Cards
         grid-template-columns: 1fr 15%;
     }
 }
-
