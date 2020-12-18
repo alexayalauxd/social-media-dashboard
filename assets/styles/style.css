@@ -19,25 +19,6 @@
 }
 
 /*----- ----- ----- ----- ----- -----
-Dark Mode
------ ----- ----- ----- ----- -----*/
-@media (prefers-color-scheme: dark) {
-    :root {
-        --Background: #1D2029;
-        --Color-header: #20222F;
-        --Black-white: #FEFFFF;
-        --Gray-dark: #6F7598;
-        --Gray-light:#777C99;
-        --Card: #252B43;
-        --Switch-1: #4595D0;
-        --Switch-2: #3CD18D;
-    }
-    .switch{
-        background: linear-gradient(90deg, #4595D0 0%, #3CD18D 100%);
-    }
-}
-
-/*----- ----- ----- ----- ----- -----
     General
 ----- ----- ----- ----- ----- -----*/
 body {
@@ -92,7 +73,7 @@ header {
     display: none;
 }
 .checkbox:checked ~ .switch:before{
-    transform: translateX(0);
+    transform: translateX(2em);
 }
 .switch {
     display: block;
@@ -112,7 +93,7 @@ header {
     width: 1.5em;
     height: 1.5em;
     border-radius: 1.5em;
-    transform: translateX(2em);
+    transform: translateX(0);
     transition: .3s;
     will-change: transform;
 }
@@ -312,5 +293,43 @@ Cards
     .header__grid{
         display: grid;
         grid-template-columns: 1fr 15%;
+    }
+}
+.is-dark-mode{
+    --Background: #1D2029;
+    --Color-header: #20222F;
+    --Black-white: #FEFFFF;
+    --Gray-dark: #6F7598;
+    --Gray-light:#777C99;
+    --Card: #252B43;
+    --Switch-1: #4595D0;
+    --Switch-2: #3CD18D;
+}
+.is-light-mode{
+    --Background: #FFFFFF;
+    --Color-header:#F8F9FE;
+    --Black-white: #202028;
+    --Gray-dark: #717483;
+    --Gray-light: #9496A2;
+    --Card: #F0F3FA;
+    --Switch-1: #AEB3C9;
+    --Switch-2: #AEB3C9;
+}
+/*----- ----- ----- ----- ----- -----
+Dark Mode
+----- ----- ----- ----- ----- -----*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --Background: #1D2029;
+        --Color-header: #20222F;
+        --Black-white: #FEFFFF;
+        --Gray-dark: #6F7598;
+        --Gray-light:#777C99;
+        --Card: #252B43;
+        --Switch-1: #4595D0;
+        --Switch-2: #3CD18D;
+    }
+    .switch{
+        background: linear-gradient(90deg, var(--Switch-1) 0%, var(--Switch-2) 100%);
     }
 }
