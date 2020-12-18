@@ -1,20 +1,33 @@
 :root {
-    --Green: hsl(163, 72%, 41%);
-    --Red: hsl(356, 69%, 56%);
-    --White: hsl(0, 0%, 100%);
-    --Gray: hsl(227, 47%, 96%);
+    --Color-header: #20222F;
 
-    --Youtube: hsl(348, 97%, 39%);
-    --Instagram-Pink: hsl(329, 70%, 58%);
-    --Instagram-Yellow: hsl(37, 97%, 70%);
-    --Twitter: hsl(203, 89%, 53%);
-    --Facebook: hsl(208, 92%, 53%);
+}
 
-    --Toggle-Gray: hsl(230, 22%, 74%);
-
-    --Blue-Gray: hsl(228, 12%, 44%);
-
-    --BG: #FFFFFF;
+/*----- ----- ----- ----- ----- -----
+    Dark Mode
+----- ----- ----- ----- ----- -----*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --Color-header: #20222F;
+    }
+    .header__p {
+        color: var(--Dark-Blue-Text);
+    }
+    .card__title {
+        color: var(--Dark-Blue-Text);
+    }
+    .card__followers-title {
+        color: var(--Dark-Blue-Text);
+    }
+    .overview__title {
+        color: var(--Dark-White);
+    }
+    .cardSmall__number {
+        color: var(--Dark-White);
+    }
+    .switch{
+        background: linear-gradient(90deg, var(--Toggle-Blue) 0%, var(--Toggle-Green) 100%);
+    }
 }
 
 /*----- ----- ----- ----- ----- -----
@@ -24,7 +37,8 @@ body {
     margin: 0;
     font-size: 14px;
     font-family: 'Inter', sans-serif;
-    background-color: var(--BG);
+    background-color: var(--Body-Bg);
+    color: var(--Body-Text);
 }
 .wrapper {
     padding: 0 30px;
@@ -35,7 +49,7 @@ body {
     Header
 ----- ----- ----- ----- ----- -----*/
 header {
-    background-color: var(--white);
+    background-color: var(--Color-header);
     padding-bottom: 100px;
     padding-top: 35px;
     border-radius: 0 0 15px 15px;
@@ -44,13 +58,14 @@ header {
     border: none;
     margin: 0;
     font-size: 1.7em;
+    color: var(--Black-White);
 }
 .header__p {
-    color: var(--Blue-Gray);
+    color: var(--Color-nose);
     margin: .5em 0;
     font-size: .9em;
     font-weight: 600;
-    border-bottom: 2px solid var(--Blue-Gray);
+    border-bottom: 2px solid var(--Color-nose);
     padding-bottom: 1.5em;
 }
 
@@ -80,13 +95,10 @@ header {
     cursor: pointer;
     user-select: none;
 }
-.switch:checked {
-    background-color: red;
-}
 .switch:before {
     content: "";
     display: block;
-    background-color: var(--White);
+    background-color: var(--Header);
     width: 1.5em;
     height: 1.5em;
     border-radius: 1.5em;
@@ -109,7 +121,7 @@ Cards
 .card {
     border-radius: 8px;
     overflow: hidden;
-    background-color: var(--Gray);
+    background-color: var(--Card-Bg);
     text-align: center;
     margin-bottom: 10px;
     padding: 1.5em 0;
@@ -153,23 +165,22 @@ Cards
     align-items: center;
     justify-content: center;
 
-    color: var(--Blue-Gray);
+    color: var(--Color-nose);
     font-size: .8em;
     font-weight: bold;
 }
 .card__title img {
     margin-right: 5px;
 }
-.card__followers {
-}
 .card__followers-nomber {
     font-size: 3em;
     font-weight: 700;
+    color: var(--Black-White);
 }
 .card__followers-title {
     display: block;
     text-transform: uppercase;
-    color: var(--Blue-Gray);
+    color: var(--Color-nose);
     letter-spacing: 3px;
     margin-top: .5em;
 }
@@ -194,13 +205,13 @@ Cards
     margin-bottom: 2em;
 }
 .overview__title {
-    color: var(--Blue-Gray);
+    color: var(--Color-nose);
 }
 .cardSmall {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 1em;
-    background-color: var(--Gray);
+    background-color: var(--Card-Bg);
     border-radius: 8px;
     padding: 1.8em;
 }
@@ -212,7 +223,7 @@ Cards
     align-items: center;
     justify-content: flex-start;
     font-weight: 600;
-    color: var(--Blue-Gray);
+    color: var(--Color-nose);
     padding-bottom: 1em;
 }
 .cardSmall__icon {
@@ -292,75 +303,3 @@ Cards
     }
 }
 
-/*----- ----- ----- ----- ----- -----
-    Dark Mode
------ ----- ----- ----- ----- -----*/
-@media (prefers-color-scheme: dark) {
-    :root {
-        --Toggle-Blue: hsl(210, 78%, 56%);
-        --Toggle-Green: hsl(146, 68%, 55%);
-    
-        --Blue-Dark: hsl(230, 17%, 14%);
-    
-        --BG: hsl(230, 17%, 14%);
-        --Dark-Very-Header: hsl(232, 19%, 15%);
-        --Dark-Blue-Card: hsl(228, 28%, 20%);
-        --Dark-Blue-Text: hsl(228, 34%, 66%);
-        --Dark-White: hsl(0, 0%, 100%);
-    }
-    /*----- ----- ----- ----- ----- -----
-        General
-    ----- ----- ----- ----- ----- -----*/
-    body {
-        background-color: var(--BG);
-        color: var(--Dark-Blue-Text);
-    }
-    header {
-        background-color: var(--Dark-Very-Header);
-    }
-    .header__title {
-        color: var(--Dark-White);
-    }
-    .header__p {
-        color: var(--Dark-Blue-Text);
-    }
-    /*----- ----- ----- ----- ----- -----
-        Cards
-    ----- ----- ----- ----- ----- -----*/
-    .card {
-        background-color: var(--Dark-Blue-Card);
-    }
-    /*----- ----- ----- ----- ----- -----
-    Cards Content
-    ----- ----- ----- ----- ----- -----*/
-    .card__title {
-        color: var(--Dark-Blue-Text);
-    }
-    .card__followers-nomber{
-        color: var(--Dark-White);
-    }
-    .card__followers-title {
-        color: var(--Dark-Blue-Text);
-    }
-    /*----- ----- ----- ----- ----- -----
-    OverView
-    ----- ----- ----- ----- ----- -----*/
-    .overview__title {
-        color: var(--Dark-White);
-    }
-    .cardSmall {
-        background-color: var(--Dark-Blue-Card);
-    }
-    .cardSmall__number {
-        color: var(--Dark-White);
-    }
-    /*----- ----- ----- ----- ----- -----
-    Dark Mode
-    ----- ----- ----- ----- ----- -----*/
-    .switch{
-        background: linear-gradient(90deg, var(--Toggle-Blue) 0%, var(--Toggle-Green) 100%);
-    }
-    .switch:before{
-        background-color: var(--Blue-Dark);
-    }
-}
