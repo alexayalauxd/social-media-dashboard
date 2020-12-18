@@ -11,19 +11,10 @@
     --Facebook: hsl(208, 92%, 53%);
 
     --Toggle-Gray: hsl(230, 22%, 74%);
-    --Toggle-Blue: hsl(210, 78%, 56%);
-    --Toggle-Green: hsl(146, 68%, 55%);
 
     --Blue-Gray: hsl(228, 12%, 44%);
-    --Blue-Dark: hsl(230, 17%, 14%);
 
-    --Dark-Blue-BG: hsl(230, 17%, 14%);
-    --Dark-Very-Header: hsl(232, 19%, 15%);
-    --Dark-Blue-Card: hsl(228, 28%, 20%);
-    --Dark-Blue-Text: hsl(228, 34%, 66%);
-    --Dark-White: hsl(0, 0%, 100%);
-
-
+    --BG: #FFFFFF;
 }
 
 /*----- ----- ----- ----- ----- -----
@@ -33,6 +24,7 @@ body {
     margin: 0;
     font-size: 14px;
     font-family: 'Inter', sans-serif;
+    background-color: var(--BG);
 }
 .wrapper {
     padding: 0 30px;
@@ -73,6 +65,9 @@ header {
 }
 .checkbox{
     display: none;
+}
+.checkbox:checked ~ .switch:before{
+    transform: translateX(0);
 }
 .switch {
     display: block;
@@ -288,28 +283,46 @@ Cards
         max-width: 1440px;
         margin: auto;
     }
+    .header__p{
+        border: none;
+    }
+    .header__grid{
+        display: grid;
+        grid-template-columns: 1fr 15%;
+    }
 }
 
 /*----- ----- ----- ----- ----- -----
     Dark Mode
 ----- ----- ----- ----- ----- -----*/
 @media (prefers-color-scheme: dark) {
+    :root {
+        --Toggle-Blue: hsl(210, 78%, 56%);
+        --Toggle-Green: hsl(146, 68%, 55%);
+    
+        --Blue-Dark: hsl(230, 17%, 14%);
+    
+        --BG: hsl(230, 17%, 14%);
+        --Dark-Very-Header: hsl(232, 19%, 15%);
+        --Dark-Blue-Card: hsl(228, 28%, 20%);
+        --Dark-Blue-Text: hsl(228, 34%, 66%);
+        --Dark-White: hsl(0, 0%, 100%);
+    }
     /*----- ----- ----- ----- ----- -----
         General
     ----- ----- ----- ----- ----- -----*/
     body {
-        background-color: var(--Dark-Blue-BG);
+        background-color: var(--BG);
         color: var(--Dark-Blue-Text);
-    }
-    .header__title {
-        color: var(--Dark-White);
     }
     header {
         background-color: var(--Dark-Very-Header);
     }
+    .header__title {
+        color: var(--Dark-White);
+    }
     .header__p {
         color: var(--Dark-Blue-Text);
-        border-bottom: 2px solid var(--Dark-Blue-Text);
     }
     /*----- ----- ----- ----- ----- -----
         Cards
@@ -346,5 +359,8 @@ Cards
     ----- ----- ----- ----- ----- -----*/
     .switch{
         background: linear-gradient(90deg, var(--Toggle-Blue) 0%, var(--Toggle-Green) 100%);
+    }
+    .switch:before{
+        background-color: var(--Blue-Dark);
     }
 }
